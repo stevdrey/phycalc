@@ -1,7 +1,7 @@
 '''
 Created on 01/01/2013
 
-@author: steven
+@author: Steven Rey Sequeira
 '''
 
 class PyCalc(object):
@@ -10,7 +10,7 @@ class PyCalc(object):
     '''
 
 
-    def __init__(self, params):
+    def __init__(self):
         '''
         Constructor
         '''
@@ -19,12 +19,12 @@ class PyCalc(object):
     
     def printMenu(self):
         print """
-              Primer calculadora en Python v1.0
+        Primer calculadora en Python v1.0
               
-              1. Sumar
-              2. Restar
-              3. Multiplicar
-              4. Dividir
+        1. Sumar
+        2. Restar
+        3. Multiplicar
+        4. Dividir
                 
               """
         return raw_input('Selecciona la operacion: ')
@@ -37,15 +37,12 @@ class PyCalc(object):
                 
             if(opcion == 1): # Suma
                 print 'El resultado de la suma es: {0}'.format(self._valor1 + self._valor2)
-                break
                 
             elif(opcion == 2): # Resta
                 print 'El resultado de la resta es: {0}'.format(self._valor1 - self._valor2)
-                break
             
             elif(opcion == 3): # Mutiplicar
                 print 'El resultado de la multiplicacion es: {0}'.format(self._valor1 * self._valor2)
-                break
             
             elif(opcion == 4): # Dividir
                 if(self._valor2 == 0):
@@ -53,7 +50,9 @@ class PyCalc(object):
                 else:
                     print 'El resultado de la divicion es: {0}'.format(self._valor1 / self._valor2)
                     
-                break
+            else:
+                print 'El valor {0} no es correcto'.format(opcion)
+            
                 
         except ValueError as ex:
             print 'Error al intentar obtener el valor, numero: {0}, mensaje: {1}'.format(ex.errono, ex.strerror)

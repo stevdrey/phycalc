@@ -7,5 +7,5 @@ from PyCalc import PyCalc
 
 if __name__ == '__main__':
     calc= PyCalc()
-    calc.calcular(calc.printMenu())
+    calc.calcular(int(calc.printMenu()))
     
