@@ -9,7 +9,6 @@ class PyCalc(object):
     classdocs
     '''
 
-
     def __init__(self):
         '''
         Constructor
@@ -25,8 +24,9 @@ class PyCalc(object):
         2. Restar
         3. Multiplicar
         4. Dividir
+        5. Salir
                 
-              """
+        """
         return raw_input('Selecciona la operacion: ')
     
               
